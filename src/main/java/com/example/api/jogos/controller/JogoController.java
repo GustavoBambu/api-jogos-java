@@ -60,7 +60,7 @@ public class JogoController {
                 })
                 .orElse(ResponseEntity.status(HttpStatus.NOT_FOUND).build()); // 404 se não encontrado
     }
-
+    // DELETE /jogos - deleta o jogo escolhido
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> delete(@PathVariable int id) {
         return repository.findById(id)
